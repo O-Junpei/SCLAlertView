@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FDBCB31BF32C230143F3AA192326555B08744183",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1B081598A070010BCCD3A3A4DD721D23ED2EDB13" : 0,
+    "FDBCB31BF32C230143F3AA192326555B08744183" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DD555428-5798-42FE-8C19-C5A8E1EF1017",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1B081598A070010BCCD3A3A4DD721D23ED2EDB13" : "",
+    "FDBCB31BF32C230143F3AA192326555B08744183" : "SCLAlertView\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SCLAlertView",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SCLAlertView.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/O-Junpei\/ReactionMechanism2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1B081598A070010BCCD3A3A4DD721D23ED2EDB13"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/O-Junpei\/SCLAlertView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDBCB31BF32C230143F3AA192326555B08744183"
+    }
+  ]
+}
