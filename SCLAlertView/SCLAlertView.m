@@ -28,8 +28,6 @@
 
 @property (nonatomic, strong) NSMutableArray *inputs;
 @property (nonatomic, strong) NSMutableArray *buttons;
-@property (nonatomic, strong) UIImageView *circleIconImageView;
-@property (nonatomic, strong) UIView *circleView;
 @property (nonatomic, strong) UIView *circleViewBackground;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIImageView *backgroundView;
@@ -208,7 +206,6 @@ SCLTimerDisplay *buttonTimer;
     CGFloat x = (kCircleHeightBackground - kCircleHeight) / 2;
     _circleView.frame = CGRectMake(x, x, kCircleHeight, kCircleHeight);
     _circleView.layer.cornerRadius = _circleView.frame.size.height / 2;
-    _circleView.backgroundColor = _circleViewBackGroundColor;
     x = (kCircleHeight - _circleIconHeight) / 2;
     _circleIconImageView.frame = CGRectMake(x, x, _circleIconHeight, _circleIconHeight);
     [_circleViewBackground addSubview:_circleView];
@@ -347,12 +344,12 @@ SCLTimerDisplay *buttonTimer;
 
 - (BOOL)prefersStatusBarHidden
 {
-  return self.statusBarHidden;
+    return self.statusBarHidden;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-  return self.statusBarStyle;
+    return self.statusBarStyle;
 }
 
 #pragma mark - Handle gesture
@@ -661,7 +658,7 @@ SCLTimerDisplay *buttonTimer;
     if (btn.validationBlock && !btn.validationBlock()) {
         return;
     }
-
+    
     if (btn.actionType == SCLBlock)
     {
         if (btn.actionBlock)
@@ -1230,7 +1227,7 @@ SCLTimerDisplay *buttonTimer;
         [self.backgroundView removeFromSuperview];
         if (_usingNewWindow)
         {
-            // Remove current window            
+            // Remove current window
             [self.SCLAlertWindow setHidden:YES];
             self.SCLAlertWindow = nil;
         }
@@ -1481,6 +1478,44 @@ SCLTimerDisplay *buttonTimer;
             self.view.center = _backgroundView.center;
         }];
     }];
+}
+
+
+- (UIImage *)getSCLAlertImages:(NSString *)alertType{
+    
+    NSString *alertStyle = [[NSString stringWithFormat:@"%@",alertType] uppercaseString];
+    UIImage *iconImage;
+    
+    // Icon style
+    if ([alertStyle isEqualToString:@"SUCCESS"]) {
+        iconImage = SCLAlertViewStyleKit.imageOfCheckmark;
+        
+    }else if ([alertStyle isEqualToString:@"ERROR"]){
+        iconImage = SCLAlertViewStyleKit.imageOfCross;
+        
+    }else if ([alertStyle isEqualToString:@"NOTICE"]){
+        iconImage = SCLAlertViewStyleKit.imageOfNotice;
+        
+    }else if ([alertStyle isEqualToString:@"WARNING"]){
+        iconImage = SCLAlertViewStyleKit.imageOfWarning;
+        
+    }else if ([alertStyle isEqualToString:@"INFO"]){
+        iconImage = SCLAlertViewStyleKit.imageOfInfo;
+        
+    }else if ([alertStyle isEqualToString:@"EDIT"]){
+        iconImage = SCLAlertViewStyleKit.imageOfEdit;
+        
+    }else if ([alertType isEqualToString:@"WAITING"]){
+        iconImage = nil;
+        
+    }else if ([alertType isEqualToString:@"QUESTION"]){
+        iconImage = SCLAlertViewStyleKit.imageOfQuestion;
+    }
+    else{
+        iconImage = nil;
+    }
+    
+    return iconImage;
 }
 
 @end

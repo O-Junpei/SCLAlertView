@@ -195,11 +195,17 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
 
 /** Set circle View Color.
  *
- * UIColor
+ * UIView
  */
-@property (nonatomic) UIColor *circleViewBackGroundColor;
+@property (nonatomic, strong) UIView *circleView;
 
 
+
+/** Set circle View Icon Image.
+ *
+ * UIImageView
+ */
+@property (nonatomic, strong) UIImageView *circleIconImageView;
 
 
 /** Initialize SCLAlertView using a new window.
@@ -413,5 +419,16 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
  */
 - (void)showQuestion:(UIViewController *)vc title:(NSString *)title subTitle:(NSString *)subTitle closeButtonTitle:(NSString *)closeButtonTitle duration:(NSTimeInterval)duration;
 - (void)showQuestion:(NSString *)title subTitle:(NSString *)subTitle closeButtonTitle:(NSString *)closeButtonTitle duration:(NSTimeInterval)duration;
+
+
+
+/*
+ * ToGetCircleImages
+ 
+ */
+
+- (UIImage *)getSCLAlertImages:(NSString *)alertType;
+
+
 
 @end
