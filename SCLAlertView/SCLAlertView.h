@@ -192,6 +192,16 @@ typedef NS_ENUM(NSInteger, SCLAlertViewBackground)
  */
 @property (nonatomic) UIStatusBarStyle statusBarStyle;
 
+
+/** Set circle View Color.
+ *
+ * UIColor
+ */
+@property (nonatomic) UIColor *circleViewBackGroundColor;
+
+
+
+
 /** Initialize SCLAlertView using a new window.
  *
  * Init with new window

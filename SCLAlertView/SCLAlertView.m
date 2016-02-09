@@ -208,6 +208,7 @@ SCLTimerDisplay *buttonTimer;
     CGFloat x = (kCircleHeightBackground - kCircleHeight) / 2;
     _circleView.frame = CGRectMake(x, x, kCircleHeight, kCircleHeight);
     _circleView.layer.cornerRadius = _circleView.frame.size.height / 2;
+    _circleView.backgroundColor = _circleViewBackGroundColor;
     x = (kCircleHeight - _circleIconHeight) / 2;
     _circleIconImageView.frame = CGRectMake(x, x, _circleIconHeight, _circleIconHeight);
     [_circleViewBackground addSubview:_circleView];
